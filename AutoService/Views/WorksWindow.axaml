@@ -9,12 +9,9 @@
         Title="WorksWindow">
 
         <StackPanel>
-                <CheckBox IsChecked="{Binding Select_1}" Content="{Binding Works[0].WorkName}"/>
-                <CheckBox IsChecked="{Binding Select_2}" Content="{Binding Works[1].WorkName}"/>
-                <CheckBox IsChecked="{Binding Select_3}" Content="{Binding Works[2].WorkName}"/>
-                <CheckBox IsChecked="{Binding Select_4}" Content="{Binding Works[3].WorkName}"/>
-                <CheckBox IsChecked="{Binding Select_5}" Content="{Binding Works[4].WorkName}"/>
-
-                <Button Content="Дальше" Command="{Binding }"/>
+                <DataGrid ItemsSource="{Sele}">
+                        <DataGridCheckBoxColumn Binding="{Binding}"/>
+                        <TextBlock Text=""/>
+                </DataGrid>
         </StackPanel>
 </Window>

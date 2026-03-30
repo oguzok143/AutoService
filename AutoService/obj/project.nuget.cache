@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nXT6dbZS8hw=",
+  "dgSpecHash": "hJaf/teZtcs=",
   "success": true,
   "projectFilePath": "/home/student/RiderProjects/AutoService/AutoService/AutoService.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "/home/student/.nuget/packages/avalonia.angle.windows.natives/2.1.25547.20250602/avalonia.angle.windows.natives.2.1.25547.20250602.nupkg.sha512",
     "/home/student/.nuget/packages/avalonia.buildservices/0.0.31/avalonia.buildservices.0.0.31.nupkg.sha512",
     "/home/student/.nuget/packages/avalonia.controls.colorpicker/11.3.4/avalonia.controls.colorpicker.11.3.4.nupkg.sha512",
+    "/home/student/.nuget/packages/avalonia.controls.datagrid/11.3.4/avalonia.controls.datagrid.11.3.4.nupkg.sha512",
     "/home/student/.nuget/packages/avalonia.desktop/11.3.4/avalonia.desktop.11.3.4.nupkg.sha512",
     "/home/student/.nuget/packages/avalonia.diagnostics/11.3.4/avalonia.diagnostics.11.3.4.nupkg.sha512",
     "/home/student/.nuget/packages/avalonia.fonts.inter/11.3.4/avalonia.fonts.inter.11.3.4.nupkg.sha512",

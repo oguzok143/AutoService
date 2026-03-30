@@ -15,14 +15,7 @@ public partial class WorksWindowViewModel : ViewModelBase
     private readonly Service _service;
 
     [ObservableProperty] private string _clientName;
-    [ObservableProperty] List<Work> _works;
-    [ObservableProperty] List<Work> _selectedWorks;
-
-    [ObservableProperty] private bool? select_1;
-    [ObservableProperty] private bool? select_2;
-    [ObservableProperty] private bool? select_3;
-    [ObservableProperty] private bool? select_4;
-    [ObservableProperty] private bool? select_5;
+    [ObservableProperty] List<SelectWork> _selectedWorks;
     
     public WorksWindowViewModel(WorkRepository repository, Service selectedService)
     {
@@ -35,7 +28,7 @@ public partial class WorksWindowViewModel : ViewModelBase
     [RelayCommand]
     public void GetWorks()
     {
-        Works = _workRepository.GetAll().Where(w => _service.Id == w.ServiceId).ToList();
+        SelectedWorks = _workRepository.GetAll().Where(w => _service.Id == w.ServiceId).Select(s => new SelectWork(s)).ToList();
     }
 
     [RelayCommand]
