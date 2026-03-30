@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:AutoService.Models"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AutoService.Views.WorksWindow"
+        x:DataType="models:WorksWindowViewModel"
+        Title="WorksWindow">
+
+        <StackPanel>
+                <CheckBox IsChecked="{Binding Select_1}" Content="{Binding Works[0].WorkName}"/>
+                <CheckBox IsChecked="{Binding Select_2}" Content="{Binding Works[1].WorkName}"/>
+                <CheckBox IsChecked="{Binding Select_3}" Content="{Binding Works[2].WorkName}"/>
+                <CheckBox IsChecked="{Binding Select_4}" Content="{Binding Works[3].WorkName}"/>
+                <CheckBox IsChecked="{Binding Select_5}" Content="{Binding Works[4].WorkName}"/>
+
+                <Button Content="Дальше" Command="{Binding }"/>
+        </StackPanel>
+</Window>
