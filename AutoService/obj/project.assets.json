@@ -3280,7 +3280,7 @@
         "net9.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "http://192.168.200.81:8081/repository/nuget.org-proxy/index.json": {}
       },
       "frameworks": {
         "net9.0": {

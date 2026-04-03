@@ -5,6 +5,7 @@
       <map>
         <entry key="AutoService/App.axaml" value="AutoService/AutoService.csproj" />
         <entry key="AutoService/Views/MainWindow.axaml" value="AutoService/AutoService.csproj" />
+        <entry key="AutoService/Views/ReceiptWindow.axaml" value="AutoService/AutoService.csproj" />
         <entry key="AutoService/Views/WorksWindow.axaml" value="AutoService/AutoService.csproj" />
       </map>
     </option>

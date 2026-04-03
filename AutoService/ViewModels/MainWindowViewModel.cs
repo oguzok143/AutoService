@@ -31,7 +31,7 @@ public partial class MainWindowViewModel : ViewModelBase
             return;
         var vm = ActivatorUtilities.CreateInstance<WorksWindowViewModel>(
             _provider, 
-            SelectedService);
+            SelectedService, CarModel);
         vm.ClientName = clientName;
         var win = _provider.GetRequiredService<WorksWindow>();
         win.DataContext = vm;

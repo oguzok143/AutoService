@@ -110,3 +110,5 @@
 /home/student/RiderProjects/AutoService/AutoService/obj/Debug/net9.0/ref/AutoService.dll
 /home/student/RiderProjects/AutoService/AutoService/bin/Debug/net9.0/appsettings.json
 /home/student/RiderProjects/AutoService/AutoService/bin/Debug/net9.0/MySqlConnector.dll
+/home/student/RiderProjects/AutoService/AutoService/bin/Debug/net9.0/Avalonia.Controls.DataGrid.dll
+/home/student/RiderProjects/AutoService/AutoService/obj/Debug/net9.0/AutoService.sourcelink.json

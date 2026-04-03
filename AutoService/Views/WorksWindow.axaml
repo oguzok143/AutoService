@@ -9,9 +9,15 @@
         Title="WorksWindow">
 
         <StackPanel>
-                <DataGrid ItemsSource="{Sele}">
-                        <DataGridCheckBoxColumn Binding="{Binding}"/>
-                        <TextBlock Text=""/>
+                <DataGrid ItemsSource="{Binding SelectedWorks}" >
+                        <DataGrid.Columns>
+                                <DataGridCheckBoxColumn Header="Выбрано" Binding="{Binding IsSelected}"/>
+                                <DataGridTextColumn Header="Назавние работы" Binding="{Binding Work.WorkName}" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="Цена" Binding="{Binding Work.Price}" IsReadOnly="True"/>
+                        </DataGrid.Columns>
                 </DataGrid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                        <Button Content="Расчитать стоимость" Command="{Binding OpenReceiptWindowCommand}"/>
+                </StackPanel>
         </StackPanel>
 </Window>
