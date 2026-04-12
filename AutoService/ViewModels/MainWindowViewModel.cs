@@ -18,6 +18,7 @@ public partial class MainWindowViewModel : ViewModelBase
     [ObservableProperty] List<Service> services;
     [ObservableProperty] Service selectedService;
 
+    public Action close;
     public MainWindowViewModel(IServiceProvider serviceProvider, ServiceRepository serviceRepository)
     {
         _provider = serviceProvider;
@@ -29,12 +30,12 @@ public partial class MainWindowViewModel : ViewModelBase
     {
         if (SelectedService == null)
             return;
+        var win = _provider.GetRequiredService<WorksWindow>();
         var vm = ActivatorUtilities.CreateInstance<WorksWindowViewModel>(
             _provider, 
-            SelectedService, CarModel);
-        vm.ClientName = clientName;
-        var win = _provider.GetRequiredService<WorksWindow>();
+            SelectedService, CarModel, ClientName);
         win.DataContext = vm;
+        vm.SetCloseAction(win.Close);
         win.Show();
 
     }

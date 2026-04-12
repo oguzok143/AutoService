@@ -17,6 +17,7 @@
                         </DataGrid.Columns>
                 </DataGrid>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                        <Button Content="Назад" Command="{Binding CloseWindowCommand}" />
                         <Button Content="Расчитать стоимость" Command="{Binding OpenReceiptWindowCommand}"/>
                 </StackPanel>
         </StackPanel>

@@ -1,3 +1,4 @@
+using AutoService.Models;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;

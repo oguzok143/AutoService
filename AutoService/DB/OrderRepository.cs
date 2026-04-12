@@ -53,13 +53,15 @@ public class OrderRepository
                 }
             }
 
-            //не работает
             foreach (var work in works)
             {
-                using var mc = new MySqlCommand(sql3, connection, transaction);
-                mc.Parameters.AddWithValue("@order_id", maxOrderId);
-                mc.Parameters.AddWithValue("@WorkPrice", work.Price);
-                mc.Parameters.AddWithValue("@WorkId", work.Id);
+                using (var mc = new MySqlCommand(sql3, connection, transaction))
+                {
+                    mc.Parameters.AddWithValue("@order_id", maxOrderId);
+                    mc.Parameters.AddWithValue("@work_id", work.Id);
+                    mc.Parameters.AddWithValue("@work_price", work.Price);
+                    mc.ExecuteNonQuery();
+                }
             }
             
             transaction.Commit();

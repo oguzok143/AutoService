@@ -23,6 +23,9 @@
                         <TextBlock Grid.Row="2" Grid.Column="0" Text="Процент скидки: "/>
                         <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding DiscountPercent}"/>
                 </Grid>
-                <Button Content="Подтвердить" Command="{Binding SaveCommand}"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" >
+                        <Button Content="Назад" Command="{Binding CloseCommand}"/>
+                        <Button Content="Подтвердить" Command="{Binding SaveCommand}"/>
+                </StackPanel>
         </StackPanel>
 </Window>

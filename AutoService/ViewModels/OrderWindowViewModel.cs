@@ -11,6 +11,7 @@ public partial class OrderWindowViewModel : ViewModelBase
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly OrderRepository _orderRepository;
+    private Action _closeAction;
 
     [ObservableProperty] List<Work> _works;
     [ObservableProperty] decimal _totalPrice;
@@ -66,4 +67,17 @@ public partial class OrderWindowViewModel : ViewModelBase
         
         _orderRepository.InsertOrder(order, Works);
     }
+    
+    public void SetCloseAction(Action closeAction)
+    {
+        _closeAction = closeAction;
+    }
+
+    
+    [RelayCommand]
+    public void CloseCommand()
+    {
+        _closeAction?.Invoke();
+    }
+
 }
